@@ -1,4 +1,4 @@
-# app-livros
+# Aplicação Informações Livros
 
 Funcionalidades:
 1) Login
