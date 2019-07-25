@@ -1,0 +1,25 @@
+.books {
+    height: calc(100vh - 100px);
+    padding: 20px 0 0;
+    overflow: auto;
+}
+
+.books-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.books-list .box {
+    width: 300px;
+    margin: 0 20px 40px;
+    justify-content: left;
+    background: #f9f9f9;
+}
+
+
+.books-list .box article {
+    width: 100%;
+}

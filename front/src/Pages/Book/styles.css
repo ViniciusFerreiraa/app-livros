@@ -1,0 +1,38 @@
+.book-info {
+    padding: 20px;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-info .title-highlight {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.book-info .box {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.book-info .title {
+    width: 100%;
+}
+
+.book-info .text {
+    width: 100%;
+}
+
+.book-info .btn.link {
+    margin-top: 50px;
+}
+
+.book-info .actions {
+    justify-content: center;
+}

@@ -1,0 +1,14 @@
+.login {
+    width: 50%;
+    padding: 20px;
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.login input[type=submit] {
+    margin-bottom: 0;
+}
