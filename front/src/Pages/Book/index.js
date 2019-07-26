@@ -2,8 +2,6 @@ import React,  { Component } from 'react';
 import api from '../../Services/api';
 import { Link } from "react-router-dom";
 
-import './styles.css';
-
 export default class Book extends Component {
     state = {
         product: [],

@@ -1,5 +1,4 @@
 import React,  { Component } from 'react';
-import "./styles.css";
 
 
 export default class Header extends Component {
@@ -13,7 +12,7 @@ export default class Header extends Component {
     }
 
     logout() {
-        console.log('alugar livro');
+        console.log('deslogar');
     }
 
     render() {
@@ -22,7 +21,7 @@ export default class Header extends Component {
                 <h1 className="title">App Livros - Vinícius Ferreira</h1>
                 <div className="user-infos">
                     <span className="text">User: Name</span>
-                    <button className="btn" onClick="logout">Logout</button>
+                    <button className="btn" onClick={this.logout}>Logout</button>
                 </div>
             </header>
         )

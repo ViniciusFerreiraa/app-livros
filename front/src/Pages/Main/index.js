@@ -1,8 +1,6 @@
 import React,  { Component } from 'react';
 import api from '../../Services/api';
-import { Link } from "react-router-dom";
-
-import './styles.css';
+import { Link, Redirect } from "react-router-dom";
 
 export default class Main extends Component {
     state = {
@@ -10,7 +8,7 @@ export default class Main extends Component {
         productInfos: {},
         page: 1,
     };
-
+    
     componentDidMount() {
         this.loadProducts();
     }
@@ -43,10 +41,11 @@ export default class Main extends Component {
         this.loadProducts(pageNumber);
     }
 
-    render() {
+    render() {        
         const { products } = this.state;
 
         return(
+
             <div className="books">
                 <span className="text-heighlight">Total Books: {this.state.productInfos.total} </span>
                 <div className="books-list">

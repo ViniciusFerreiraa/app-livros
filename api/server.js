@@ -10,12 +10,23 @@ app.use(cors());
 
 // Iniciando o DB
 mongoose.connect(
-    "mongodb://localhost:27017/app-livros",
+    "mongodb://localhost:27017/api",
     { useNewUrlParser: true }
 );
 requireDir("./src/models/");
 
 // Rotas
+const Product = mongoose.model('Product');
+
+app.get("/", (req, res) => {
+    Product.create({
+        title: "React Js",
+        description: "Aplicativo em react",
+        rented: false,
+        rentedBy: "noone"
+    });
+})
+
 app.use("/api", require("./src/routes"));
 
 app.listen(3001);

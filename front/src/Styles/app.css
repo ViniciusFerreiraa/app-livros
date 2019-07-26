@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.box-full {
+  height: calc( 100vh - 100px);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.box {
+  background: #ebebeb;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+
+input {
+  height: 40px;
+  padding: 10px; }
+
+.title {
+  display: block;
+  color: #516bf0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+
+.text {
+  display: block;
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 auto 20px; }
+
+.text-heighlight {
+  color: #444;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin: 20px auto; }
+
+.actions {
+  display: flex;
+  padding: 20px;
+  margin: 20px 0 50px;
+  width: 100%;
+  justify-content: space-between; }
+
+.actions .btn {
+  width: 300px; }
+
+button {
+  border: none;
+  cursor: pointer; }
+
+.btn {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  background: #7f8395fc;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  line-height: 40px;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer; }
+  .btn.submit {
+    padding: 0; }
+  .btn.link {
+    background: #536ad1fc; }
+  .btn[disabled] {
+    cursor: default;
+    opacity: 0.2; }
+  .btn:not([disabled]):hover {
+    opacity: 0.7; }
+
+#header {
+  height: 100px;
+  width: 100%;
+  background: #7f8395fc;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px; }
+  #header .title {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    width: 55%;
+    text-transform: none; }
+  #header .user-infos {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+  #header .user-infos .text {
+    color: white;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 0;
+    text-align: right; }
+  #header .user-infos .btn {
+    background: #61636efc;
+    line-height: 25px;
+    text-transform: none;
+    margin-top: 10px;
+    max-width: 100px; }
+  @media screen and (min-width: 720px) {
+    #header .title {
+      font-size: 20px; }
+    #header .user-infos .text {
+      font-size: 16px; } }
+
+.books {
+  height: calc(100vh - 100px);
+  padding: 20px 0 0;
+  overflow: auto; }
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; }
+
+.books-list .box {
+  width: 300px;
+  margin: 0 20px 40px;
+  justify-content: left;
+  background: #f9f9f9; }
+
+.books-list .box article {
+  width: 100%; }
+
+.login,
+.register {
+  width: 50%;
+  padding: 20px;
+  max-width: 300px; }
+  .login input,
+  .register input {
+    width: 100%;
+    margin-bottom: 20px; }
+    .login input[type=submit],
+    .register input[type=submit] {
+      margin-bottom: 0; }
+
+.book-info {
+  padding: 20px;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .book-info .title-highlight {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%; }
+  .book-info .box {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+  .book-info .title {
+    width: 100%; }
+  .book-info .text {
+    width: 100%; }
+  .book-info .btn.link {
+    margin-top: 50px; }
+  .book-info .actions {
+    justify-content: center; }
