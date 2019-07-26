@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Routes from './routes';
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import Header from './Components/Header';
 
@@ -7,7 +8,12 @@ import "./Styles/app.css";
 
 const App = () => (
   <div className="App">
-    <Header />
+    <BrowserRouter>
+      <Switch>
+        <Route path="*" component={Header} />
+      </Switch>
+    </BrowserRouter>
+    
     <Routes />
   </div>
 )

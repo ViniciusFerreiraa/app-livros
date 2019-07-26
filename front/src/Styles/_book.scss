@@ -14,6 +14,7 @@
     }
     
     .box {
+        width: 300px;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
@@ -33,5 +34,9 @@
     
     .actions {
         justify-content: center;
+
+        .btn{
+            margin: 50px 10px 0;
+        }
     }
 }

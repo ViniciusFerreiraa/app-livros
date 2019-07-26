@@ -10,7 +10,7 @@ app.use(cors());
 
 // Iniciando o DB
 mongoose.connect(
-    "mongodb://localhost:27017/api",
+    "mongodb://localhost:27017/app-livros",
     { useNewUrlParser: true }
 );
 requireDir("./src/models/");

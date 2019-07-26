@@ -23,12 +23,15 @@ export default class Book extends Component {
         const { product } = this.state;
         const isRented = product.rented;
         let rentBook;
+        let editBook;
 
         console.log(isRented);
         if ( isRented ) {
-            rentBook = <span className="text-highlight">This book has been rented</span>
+            rentBook = <span className="text-highlight">This book has been rented</span>;
+            editBook = "";
         } else {
             rentBook = <button onClick={this.rent} className="btn">Alugar</button>;
+            editBook = <Link to={`/edit/${product._id}`} className="btn link">Edit Book</Link>;
         }
 
         return (
@@ -41,6 +44,7 @@ export default class Book extends Component {
                 </div>
                 
                 <div className="actions">
+                    {editBook}
                     <Link to={'/'} className="btn link">Back to list</Link>
                 </div>
             </div>

@@ -3,6 +3,7 @@ const routes = express.Router();
 
 const UserController = require('./controllers/UserController');
 const ProductController = require('./controllers/ProductController');
+const SessionController = require('./controllers/SessionController');
 
 routes.post("/books", ProductController.create);
 routes.get("/books", ProductController.index);
@@ -11,9 +12,6 @@ routes.put("/books/:id/:userid", ProductController.update);
 routes.delete("/books/:id", ProductController.destroy);
 
 routes.post("/user", UserController.create);
-routes.get("/user", UserController.index);
-// routes.get("/user/:id", UserController.show);
-// routes.put("/user/:id", UserController.update);
-// routes.delete("/user/:id", UserController.destroy);
+routes.post("/sessions", SessionController.create);
 
 module.exports = routes;

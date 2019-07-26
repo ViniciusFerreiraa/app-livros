@@ -123,7 +123,8 @@ button {
     line-height: 25px;
     text-transform: none;
     margin-top: 10px;
-    max-width: 100px; }
+    max-width: 100px;
+    margin-left: 20PX; }
   @media screen and (min-width: 720px) {
     #header .title {
       font-size: 20px; }
@@ -150,18 +151,39 @@ button {
 .books-list .box article {
   width: 100%; }
 
+.form,
 .login,
 .register {
-  width: 50%;
+  width: 100%;
   padding: 20px;
-  max-width: 300px; }
+  max-width: 400px; }
+  .form p.error,
+  .login p.error,
+  .register p.error {
+    border: 1px solid red;
+    color: red;
+    font-size: 13px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; }
+  .form input,
   .login input,
   .register input {
     width: 100%;
     margin-bottom: 20px; }
+    .form input[type=submit],
     .login input[type=submit],
     .register input[type=submit] {
       margin-bottom: 0; }
+  .form .btn,
+  .login .btn,
+  .register .btn {
+    margin: 0 auto; }
+    .form .btn.link,
+    .login .btn.link,
+    .register .btn.link {
+      text-transform: none;
+      font-weight: 400; }
 
 .book-info {
   padding: 20px;
@@ -176,6 +198,7 @@ button {
     margin-bottom: 30px;
     width: 100%; }
   .book-info .box {
+    width: 300px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; }
@@ -187,3 +210,5 @@ button {
     margin-top: 50px; }
   .book-info .actions {
     justify-content: center; }
+    .book-info .actions .btn {
+      margin: 50px 10px 0; }

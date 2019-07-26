@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { isAuthenticated } from "./Services/auth";
 
-import Main from './Pages/Main';
-import Book from './Pages/Book';
 import Login from './Pages/Login';
-
-const loggedIn = false;
+import Signup from './Pages/Signup';
+import Books from './Pages/Main';
+import Book from './Pages/Book';
+import Admin from './Pages/Admin';
+import Edit from './Pages/Edit';
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
     <Route
@@ -24,13 +25,16 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes = () => (
     <BrowserRouter>
         <Switch>
-            {/* <Route exact path="/" component={Main} />
+            {/* <Route exact path="/" component={Books} />
             <Route path="/login/" component={Login} />
             <Route path="/book/:id" component={Book} /> */}
             
             <Route exact path="/" component={Login} />
-            <Route path="/signup" component={Login} />
-            <PrivateRoute path="/app" component={() => <h1>App</h1>} />
+            <Route path="/signup" component={Signup} />
+            <PrivateRoute path="/books" component={Books} />
+            <PrivateRoute path="/admin" component={Admin} />
+            <PrivateRoute path="/edit/:id" component={Edit} />
+            <PrivateRoute path="/book/:id" component={Book} /> */}
             <Route path="*" component={() => <h1>Page not found</h1>} />
         </Switch>
     </BrowserRouter>
